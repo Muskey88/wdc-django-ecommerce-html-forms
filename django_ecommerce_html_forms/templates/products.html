@@ -7,6 +7,7 @@
     {% if featured_products %}
       <!-- Loop through all featured products and render the component below replacing each part properly -->
       <!-- YOUR FOR LOOP HERE -->
+    {% for product in featured_products %}
       <div class="col" style="">
         <div class="card mx-auto" style="height: 100%; width: 12rem;">
           {% if featured_product.productimage_set.all %}
@@ -30,6 +31,7 @@
           </div>
         </div>
       </div>
+      {% endfor %}
       <!-- YOUR END FOR LOOP HERE -->
     {% else %}
       <div class="col">
